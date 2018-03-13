@@ -1,0 +1,20 @@
+{
+  "name": "es-http-error",
+  "version": "1.0.0",
+  "description": "HttpError class for browsers (without Node.js dependencies)",
+  "module": "index.js",
+  "files": [
+    "index.js"
+  ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cognitom/es-http-error.git"
+  },
+  "keywords": ["error", "http status code"],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cognitom/es-http-error/issues"
+  },
+  "homepage": "https://github.com/cognitom/es-http-error#readme"
+}
