@@ -22,6 +22,7 @@ throw new HttpError(401, 'Unauthorized') // Custom Error Message
 
 ```javascript
 import HttpError from 'es-http-error'
+import HttpStatusCodes from 'es-http-error'
 
 main()
 async function main (id) {
@@ -35,11 +36,18 @@ async function main (id) {
     const render(view(await res.json()), document.body)
   } catch (e) {
     if (e instanceof HttpError) {
-      if (e.code === 401) logout()
-      if (e.code === 404) notFound()
+      if (e.code === HttpStatusCodes.unauthorized) logout()
+      if (e.code === HttpStatusCodes.not-found) notFound()
     } else throw e
   }
 }
+```
+
+```javascript
+import HttpError from 'es-http-error'
+import httpStatusCodes from 'es-http-error'
+
+throw new HttpError(HttpStatusCodes.not-found.code);
 ```
 
 ## Motivation
