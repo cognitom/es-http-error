@@ -167,8 +167,8 @@ export const HttpStatusCodes = {
 
 export default class HttpError extends Error {
   constructor(code, message, ...args) {
-    const codeObject = Object.values(HttpStatusCodes).find(status => status.code == code)
-    super(message || (codeObject && codeObject.en) || '', ...args)
+    this.type = Object.values(HttpStatusCodes).find(status => status.code == code)
+    super(message || (this.type && this.type.en) || '', ...args)
     this.code = code
   }
 }

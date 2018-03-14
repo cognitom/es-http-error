@@ -36,8 +36,8 @@ async function main (id) {
     const render(view(await res.json()), document.body)
   } catch (e) {
     if (e instanceof HttpError) {
-      if (e.code === HttpStatusCodes.unauthorized) logout()
-      if (e.code === HttpStatusCodes.not-found) notFound()
+      if (e.type === HttpStatusCodes.unauthorized) logout()
+      if (e.type === HttpStatusCodes.not-found) notFound()
     } else throw e
   }
 }
