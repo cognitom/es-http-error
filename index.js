@@ -1,174 +1,94 @@
-export const HttpStatusCodes = {
-  'bad-request': {
-    code: 400,
-    en: 'Bad Request'
-  },
-  'unauthorized': {
-    code: 401,
-    en: 'Unauthorized'
-  },
-  'payment-required': {
-    code: 402,
-    en: 'Payment Required'
-  },
-  'forbidden': {
-    code: 403,
-    en: 'Forbidden'
-  },
-  'not-found': {
-    code: 404,
-    en: 'Not Found'
-  },
-  'method-not-allowed': {
-    code: 405,
-    en: 'Method Not Allowed'
-  },
-  'not-acceptable': {
-    code: 406,
-    en: 'Not Acceptable'
-  },
-  'proxy-authentication-required': {
-    code: 407,
-    en: 'Proxy Authentication Required'
-  },
-  'request-timeout': {
-    code: 408,
-    en: 'Request Timeout'
-  },
-  'conflict': {
-    code: 409,
-    en: 'Conflict'
-  },
-  'gone': {
-    code: 410,
-    en: 'Gone'
-  },
-  'length-required': {
-    code: 411,
-    en: 'Length Required'
-  },
-  'precondition-failed': {
-    code: 412,
-    en: 'Precondition Failed'
-  },
-  'payload-too-large': {
-    code: 413,
-    en: 'Payload Too Large'
-  },
-  'uri-too-long': {
-    code: 414,
-    en: 'URI Too Long'
-  },
-  'unsupported-media-type': {
-    code: 415,
-    en: 'Unsupported Media Type'
-  },
-  'range-not-satisfiable': {
-    code: 416,
-    en: 'Range Not Satisfiable'
-  },
-  'expectation-failed': {
-    code: 417,
-    en: 'Expectation Failed'
-  },
-  'ima-teapot': {
-    code: 418,
-    en: 'ImA Teapot'
-  },
-  'misdirected-request': {
-    code: 421,
-    en: 'Misdirected Request'
-  },
-  'unprocessable-entity': {
-    code: 422,
-    en: 'Unprocessable Entity'
-  },
-  'locked': {
-    code: 423,
-    en: 'Locked'
-  },
-  'failed-dependency': {
-    code: 424,
-    en: 'Failed Dependency'
-  },
-  'unordered-collection': {
-    code: 425,
-    en: 'Unordered Collection'
-  },
-  'upgrade-required': {
-    code: 426,
-    en: 'Upgrade Required'
-  },
-  'precondition-required': {
-    code: 428,
-    en: 'Precondition Required'
-  },
-  'too-many-requests': {
-    code: 429,
-    en: 'Too Many Requests'
-  },
-  'request-header-fields-too-large': {
-    code: 431,
-    en: 'Request Header Fields Too Large'
-  },
-  'unavailable-for-legal-reasons': {
-    code: 451,
-    en: 'Unavailable For Legal Reasons'
-  },
-  'internal-server-error': {
-    code: 500,
-    en: 'Internal Server Error'
-  },
-  'not-implemented': {
-    code: 501,
-    en: 'Not Implemented'
-  },
-  'bad-gateway': {
-    code: 502,
-    en: 'Bad Gateway'
-  },
-  'service-unavailable': {
-    code: 503,
-    en: 'Service Unavailable'
-  },
-  'gateway-timeout': {
-    code: 504,
-    en: 'Gateway Timeout'
-  },
-  'http-version-not-supported': {
-    code: 505,
-    en: 'HTTP Version Not Supported'
-  },
-  'variant-also-negotiates': {
-    code: 506,
-    en: 'Variant Also Negotiates'
-  },
-  'insufficient-storage': {
-    code: 507,
-    en: 'Insufficient Storage'
-  },
-  'loop-detected': {
-    code: 508,
-    en: 'Loop Detected'
-  },
-  'bandwidth-limit-exceeded': {
-    code: 509,
-    en: 'Bandwidth Limit Exceeded'
-  },
-  'not-extended': {
-    code: 510,
-    en: 'Not Extended'
-  },
-  'network-authentication-required': {
-    code: 511,
-    en: 'Network Authentication Required'
-  }
+export const httpCodes = {
+  badRequest: 400,
+  unauthorized: 401,
+  paymentRequired: 402,
+  forbidden: 403,
+  notFound: 404,
+  methodNotAllowed: 405,
+  notAcceptable: 406,
+  proxyAuthenticationRequired: 407,
+  requestTimeout: 408,
+  conflict: 409,
+  gone: 410,
+  lengthRequired: 411,
+  preconditionFailed: 412,
+  payloadTooLarge: 413,
+  uriTooLong: 414,
+  unsupportedMediaType: 415,
+  rangeNotSatisfiable: 416,
+  expectationFailed: 417,
+  imaTeapot: 418,
+  misdirectedRequest: 421,
+  unprocessableEntity: 422,
+  locked: 423,
+  failedDependency: 424,
+  unorderedCollection: 425,
+  upgradeRequired: 426,
+  preconditionRequired: 428,
+  tooManyRequests: 429,
+  requestHeaderFieldsTooLarge: 431,
+  unavailableForLegalReasons: 451,
+  internalServerError: 500,
+  notImplemented: 501,
+  badGateway: 502,
+  serviceUnavailable: 503,
+  gatewayTimeout: 504,
+  httpVersionNotSupported: 505,
+  variantAlsoNegotiates: 506,
+  insufficientStorage: 507,
+  loopDetected: 508,
+  bandwidthLimitExceeded: 509,
+  notExtended: 510,
+  networkAuthenticationRequired: 511,
+};
+
+const dictionary = {
+  400: 'Bad Request',
+  401: 'Unauthorized',
+  402: 'Payment Required',
+  403: 'Forbidden',
+  404: 'Not Found',
+  405: 'Method Not Allowed',
+  406: 'Not Acceptable',
+  407: 'Proxy Authentication Required',
+  408: 'Request Timeout',
+  409: 'Conflict',
+  410: 'Gone',
+  411: 'Length Required',
+  412: 'Precondition Failed',
+  413: 'Payload Too Large',
+  414: 'URI Too Long',
+  415: 'Unsupported Media Type',
+  416: 'Range Not Satisfiable',
+  417: 'Expectation Failed',
+  418: 'ImA Teapot',
+  421: 'Misdirected Request',
+  422: 'Unprocessable Entity',
+  423: 'Locked',
+  424: 'Failed Dependency',
+  425: 'Unordered Collection',
+  426: 'Upgrade Required',
+  428: 'Precondition Required',
+  429: 'Too Many Requests',
+  431: 'Request Header Fields Too Large',
+  451: 'Unavailable For Legal Reasons',
+  500: 'Internal Server Error',
+  501: 'Not Implemented',
+  502: 'Bad Gateway',
+  503: 'Service Unavailable',
+  504: 'Gateway Timeout',
+  505: 'HTTP Version Not Supported',
+  506: 'Variant Also Negotiates',
+  507: 'Insufficient Storage',
+  508: 'Loop Detected',
+  509: 'Bandwidth Limit Exceeded',
+  510: 'Not Extended',
+  511: 'Network Authentication Required'
 };
 
 export default class HttpError extends Error {
   constructor(code, message, ...args) {
-    this.type = Object.values(HttpStatusCodes).find(status => status.code == code)
-    super(message || (this.type && this.type.en) || '', ...args)
+    super(message || dictionary[code] || '', ...args)
     this.code = code
   }
 }
