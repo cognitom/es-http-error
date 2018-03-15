@@ -40,7 +40,7 @@ export const httpCodes = {
   bandwidthLimitExceeded: 509,
   notExtended: 510,
   networkAuthenticationRequired: 511,
-};
+}
 
 const dictionary = {
   400: 'Bad Request',
@@ -84,7 +84,7 @@ const dictionary = {
   509: 'Bandwidth Limit Exceeded',
   510: 'Not Extended',
   511: 'Network Authentication Required'
-};
+}
 
 export default class HttpError extends Error {
   constructor(code, message, ...args) {
