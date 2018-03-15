@@ -10,11 +10,20 @@
     "type": "git",
     "url": "git+https://github.com/cognitom/es-http-error.git"
   },
-  "keywords": ["error", "http status code"],
+  "keywords": [
+    "error",
+    "http status code"
+  ],
   "author": "",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/cognitom/es-http-error/issues"
   },
-  "homepage": "https://github.com/cognitom/es-http-error#readme"
+  "homepage": "https://github.com/cognitom/es-http-error#readme",
+  "devDependencies": {
+    "standard": "^11.0.1"
+  },
+  "scripts": {
+    "standard": "standard *.js"
+  }
 }
