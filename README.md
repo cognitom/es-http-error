@@ -43,6 +43,20 @@ async function main (id) {
 }
 ```
 
+## i18n
+
+```javascript
+import HttpError, {httpCodes} from 'es-http-error/langs/ja'
+
+try {
+  throw new HttpError(404)
+} catch (e) {
+  console.log(e.message) // translated message "未検出"
+}
+```
+
+[Supported languages are listed here](langs/).
+
 ## Motivation
 
 There're some prior arts like below, but I couldn't find the one for browsers. So I made it.
