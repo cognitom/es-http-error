@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 import {equal} from 'assert'
-import EnHttpError, {httpCodes as enHttpCodes} from '../en.js'
-import JaHttpError, {httpCodes as jaHttpCodes} from '../ja.js'
+import EnHttpError, {httpCodes as enHttpCodes} from '../langs/en.js'
+import JaHttpError, {httpCodes as jaHttpCodes} from '../langs/ja.js'
 
 describe('en - English', () => {
   it('says a translated message', () => {

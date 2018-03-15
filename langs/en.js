@@ -1,4 +1,6 @@
-export default {
+import factory from '../lib/factory.js'
+
+const dictionary = {
   400: 'Bad Request',
   401: 'Unauthorized',
   402: 'Payment Required',
@@ -41,3 +43,6 @@ export default {
   510: 'Not Extended',
   511: 'Network Authentication Required'
 }
+
+export {httpCodes} from '../lib/status-codes.js'
+export default factory(dictionary)
