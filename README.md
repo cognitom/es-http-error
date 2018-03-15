@@ -13,6 +13,7 @@ $ npm install es-http-error
 ```javascript
 throw new HttpError(404) // 'Not Found' as a default message
 throw new HttpError(401, 'Unauthorized') // Custom Error Message
+throw new HttpError(httpCodes.notFound); // Using with enums
 ```
 
 [Supported http status codes are here](index.js).
@@ -21,7 +22,7 @@ throw new HttpError(401, 'Unauthorized') // Custom Error Message
 ## Example
 
 ```javascript
-import HttpError from 'es-http-error'
+import HttpError, {httpCodes} from 'es-http-error'
 
 main()
 async function main (id) {
@@ -35,8 +36,8 @@ async function main (id) {
     const render(view(await res.json()), document.body)
   } catch (e) {
     if (e instanceof HttpError) {
-      if (e.code === 401) logout()
-      if (e.code === 404) notFound()
+      if (e.code === httpCodes.unauthorized) logout()
+      if (e.code === httpCodes.notFound) notFound()
     } else throw e
   }
 }
