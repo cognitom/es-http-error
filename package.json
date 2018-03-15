@@ -16,7 +16,7 @@
     "error",
     "http status code"
   ],
-  "author": "",
+  "author": "Tsutomu Kawamura & Juha-Pekka Rajaniemi",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/cognitom/es-http-error/issues"
