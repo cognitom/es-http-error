@@ -44,5 +44,5 @@ const dictionary = {
   511: 'Network Authentication Required'
 }
 
-export {httpCodes} from '../lib/status-codes.js'
+export {statusCodes} from '../lib/status-codes.js'
 export default factory(dictionary)

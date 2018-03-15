@@ -1,1 +1,1 @@
-export {default, httpCodes} from './langs/en.js'
+export {default, statusCodes} from './langs/en.js'

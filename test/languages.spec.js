@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 import {equal} from 'assert'
-import EnHttpError, {httpCodes as enHttpCodes} from '../langs/en.js'
-import JaHttpError, {httpCodes as jaHttpCodes} from '../langs/ja.js'
+import EnHttpError, {statusCodes as enStatusCodes} from '../langs/en.js'
+import JaHttpError, {statusCodes as jaStatusCodes} from '../langs/ja.js'
 
 describe('en - English', () => {
   it('says a translated message', () => {
@@ -13,7 +13,7 @@ describe('en - English', () => {
   })
   it('exports httpCodes as well', () => {
     try {
-      throw new EnHttpError(enHttpCodes.notFound)
+      throw new EnHttpError(enStatusCodes.notFound)
     } catch (e) {
       equal(e.code, 404)
     }
@@ -30,7 +30,7 @@ describe('ja - Japanese', () => {
   })
   it('exports httpCodes as well', () => {
     try {
-      throw new JaHttpError(jaHttpCodes.notFound)
+      throw new JaHttpError(jaStatusCodes.notFound)
     } catch (e) {
       equal(e.code, 404)
     }

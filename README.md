@@ -22,7 +22,7 @@ throw new HttpError(httpCodes.notFound); // Using with enums
 ## Example
 
 ```javascript
-import HttpError, {httpCodes} from 'es-http-error'
+import HttpError, {statusCodes} from 'es-http-error'
 
 main()
 async function main (id) {
@@ -37,7 +37,7 @@ async function main (id) {
   } catch (e) {
     if (e instanceof HttpError) {
       if (e.code === 401) logout() // check the code simply by number
-      if (e.code === httpCodes.notFound) notFound() // or via httpCodes
+      if (e.code === statusCodes.notFound) notFound() // or via httpCodes
     } else throw e
   }
 }
@@ -46,7 +46,7 @@ async function main (id) {
 ## i18n
 
 ```javascript
-import HttpError, {httpCodes} from 'es-http-error/langs/ja'
+import HttpError, {statusCodes} from 'es-http-error/langs/ja'
 
 try {
   throw new HttpError(404)

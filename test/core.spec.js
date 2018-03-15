@@ -1,6 +1,6 @@
 /* eslint-env mocha */
 import {ok, equal} from 'assert'
-import HttpError, {httpCodes} from '../'
+import HttpError, {statusCodes} from '../'
 
 describe('HttpError', () => {
   it('is HttpError', () => {
@@ -40,7 +40,7 @@ describe('HttpError', () => {
   })
   it('creates a new one via httpCodes', () => {
     try {
-      throw new HttpError(httpCodes.notFound)
+      throw new HttpError(statusCodes.notFound)
     } catch (e) {
       equal(e.code, 404)
     }
