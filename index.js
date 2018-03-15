@@ -39,7 +39,7 @@ export const httpCodes = {
   loopDetected: 508,
   bandwidthLimitExceeded: 509,
   notExtended: 510,
-  networkAuthenticationRequired: 511,
+  networkAuthenticationRequired: 511
 }
 
 const dictionary = {
@@ -87,7 +87,7 @@ const dictionary = {
 }
 
 export default class HttpError extends Error {
-  constructor(code, message, ...args) {
+  constructor (code, message, ...args) {
     super(message || dictionary[code] || '', ...args)
     this.code = code
   }
