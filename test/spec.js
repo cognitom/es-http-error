@@ -1,6 +1,6 @@
 /* eslint-env mocha */
 import {ok, equal} from 'assert'
-import HttpError, {httpCodes} from '../'
+import HttpError, {httpCodes} from '../lib/'
 
 describe('HttpError', () => {
   it('is HttpError', () => {

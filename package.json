@@ -2,9 +2,10 @@
   "name": "es-http-error",
   "version": "1.0.0",
   "description": "HttpError class for browsers (without Node.js dependencies)",
-  "module": "index.js",
+  "module": "lib/index.js",
   "files": [
-    "index.js"
+    "lib/*",
+    "languages/*"
   ],
   "repository": {
     "type": "git",
@@ -27,7 +28,7 @@
   },
   "scripts": {
     "test": "npm run standard && npm run mocha",
-    "standard": "standard *.js test/*.js",
+    "standard": "standard lib/*.js languages/*.js test/*.js",
     "mocha": "mocha test/spec.js --require reify"
   }
 }
