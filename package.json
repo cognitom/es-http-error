@@ -6,7 +6,7 @@
   "files": [
     "*.js",
     "lib/*",
-    "languages/*"
+    "langs/*"
   ],
   "repository": {
     "type": "git",
