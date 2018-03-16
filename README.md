@@ -16,7 +16,7 @@ throw new HttpError(401, 'Unauthorized') // Custom Error Message
 throw new HttpError(statusCodes.notFound); // Using with enums
 ```
 
-[Supported http status codes are here](index.js).
+[Supported http status codes are here](langs/en.js).
 
 
 ## Example
