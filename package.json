@@ -1,6 +1,6 @@
 {
   "name": "es-http-error",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "HttpError class for browsers (without Node.js dependencies)",
   "module": "index.js",
   "files": [
