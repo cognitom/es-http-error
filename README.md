@@ -65,7 +65,9 @@ This library also provides a CommonJS vesion complementally.
 
 ```javascript
 const HttpError = require('es-http-error')
-throw new HttpError(404)
+const {statusCodes} = HttpError
+
+throw new HttpError(statusCodes.notFound)
 ```
 
 ## Motivation

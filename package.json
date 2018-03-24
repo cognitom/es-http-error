@@ -34,7 +34,7 @@
     "test": "npm run standard && npm run mocha",
     "standard": "standard lib/*.js langs/*.js test/*.js",
     "mocha": "mocha test/*.spec.js --require reify",
-    "rollup": "rollup index.js -o dist/index.js -f cjs",
+    "rollup": "rollup common.js -o dist/index.js -f cjs",
     "prepublish": "npm run rollup"
   }
 }
