@@ -57,6 +57,17 @@ try {
 
 [Supported languages are listed here](langs/).
 
+## Serverside Usage (on Node.js)
+
+This library also provides a CommonJS vesion complementally.
+
+**Note**: there's no support for i18n for CommonJS version.
+
+```javascript
+const HttpError = require('es-http-error')
+throw new HttpError(404)
+```
+
 ## Motivation
 
 There're some prior arts like below, but I couldn't find the one for browsers. So I made it.
